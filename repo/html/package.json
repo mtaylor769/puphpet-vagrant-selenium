@@ -1,0 +1,44 @@
+{
+  "name": "puphpet-vagrant-selenium",
+  "version": "1.0.0",
+  "repository": "git+ssh://git@github.com:mtaylor769/puphpet-vagrant-selenium.git",
+  "description": "Selenium testing library",
+  "scripts": {
+    "start": "node ./test.js || true",
+    "debug": "node --debug ./test.js || true",
+    "watch": "nodemon -w ./ ./test.js",
+    "test:lint": "eslint --ext .js ./app/**",
+    "token": "curl -s -X POST http://localhost:8000/auth-token -H 'Content-Type: application/json; charset=UTF-8' -d '{ \"email\": \"admin\", \"password\": \"admin\" }' | jq -r '.token'"
+  },
+  "author": "WMCP",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "vue": "^2.3.2",
+    "vue-cli": "^2.8.1",
+    "selenium-webdriver": "^3.4.0",
+    "phantomjs": "^2.1.1",
+    "geckodriver": "^1.6.1",
+    "chromedriver": "^2.12.0",
+    "mocha": "2.0.1",
+    "chai": "^1.10.0",
+    "chai-as-promised": "4.1.1",
+    "knex": "^0.10.0",
+    "lodash": "^4.5.1",
+    "mock-knex": "0.3.1",
+    "moment": "2.14.1",
+    "mustache": "^2.2.1",
+    "node-uuid": "^1.4.7",
+    "mysql": "^2.13.0"
+  },
+  "devDependencies": {
+    "code": "^4.0.0",
+    "eslint": "^3.10.0",
+    "faker": "^3.1.0",
+    "lab": "^12.1.0",
+    "knex-cleaner": "^1.1.3",
+    "nock": "^8.0.0",
+    "nodemon": "^1.9.1",
+    "testdouble": "^1.4.1",
+    "webpack": "2.4.1"
+  }
+}
